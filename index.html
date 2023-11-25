@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Monty Hall Game</title>
+  </head>
+  <body>
+    <h1>Monty Hall Game</h1>
+    <h2>Make the correct choice to win €10,000!</h2>
+    <section class="doors">
+      <div class="door">
+        <button class="btn" id="door0">
+          <img id="door-img" src="door.png" />
+        </button>
+        <p class="prize" id="prize0">€0</p>
+        <div class="border hidden" id="border0"></div>
+      </div>
+      <div class="door">
+        <button class="btn" id="door1">
+          <img id="door-img" src="door.png" />
+        </button>
+        <p class="prize" id="prize1">€0</p>
+        <div class="border hidden" id="border1"></div>
+      </div>
+      <div class="door">
+        <button class="btn" id="door2">
+          <img id="door-img" src="door.png" />
+        </button>
+        <p class="prize" id="prize2">€0</p>
+        <div class="border hidden" id="border2"></div>
+      </div>
+    </section>
+    <section class="switch-or-stick">
+      <button id="switch">SWITCH</button>
+      <button id="stick">STICK</button>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+MONTY HALL PROBLEM GAME
+
+3 doors - behind one is a car, behind the others are goats
+    choose a door
+    host opens a door with a goat behind
+    do you switch or stick?
+
+1. Create html file
+    Title: Let's Make a Deal
+    Subtitle: Make the right decision to win a car!
+    paragraph 1: behind the doors are 2 goats and a car. try to choose the door with the car behind it
+        -player chooses a door
+    paragraph 2: I will now open a door which is hiding a goat. Do you want to switch doors to try to lock down the car.
+        -door with goat opens
+        -player chooses switch or stick
+    Either:
+        -You win a brand new car!
+        -Bad luck. It's a goat for you
+
+    - 3 doors
+        -door_closed.png
+        -door_open.png
+    - car.png
+    - goat.png
+    - z-index: pictures behind doors
+
+2. Logic
+
+    array: doors[]
+    random number between 1 and 3. corresponding door to chosen number has the car behind it
+        e.g. 3
+        doorsHaveCar: [false, false, true]
+    door on click -> doorsChosen: [true, false, true]   
+    reveal door without car
+
+
+
+When a door is chosen:
+    case 1: player chooses the door with the prize
+        choose a random of the other 2 doors to open
+    case 2: palyer chooses a door without a prize
+        choose the availabe door without a prize
+
+
+does the chosen door have the prize
+
+player chooses door with prize:
+    chooses door0 -> show door1
+    chooses door1 -> show door0
+    chooses door2 -> show door0
+
+player choosees door without prize:
+    0  0  1
+    c
+       c
+    0  1  0
+    c
+          c
+    1  0  0
+       c 
+          c
+
+promises
+    promise to do something
+        either:
+        resolved - promise completed
+        rejected - promise not completed
+
+let p = new Promise((resolve, reject) => {
+    let a = 1 + 1;
+    if (a == 2) {
+        resolve('Success')
+    } else {
+        reject('Failed');
+    }
+})
+//Runs after resolve
+p.then((message) => console.log('This is in the then ' + message)).catch((message) => {
+    console.log('This is in the catch ' + message)
+})
